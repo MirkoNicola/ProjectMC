@@ -1,1 +1,16 @@
 
+<form [formGroup]="registerForm" ng(Submit)="createAccount">
+    <p>
+        <input formControlName="FirstName" placeholder="FirstName" type="text">
+            <input formControlName="LasttName" placeholder="LastName" type="text">
+                <input formControlName="Username" placeholder="Username" type="text">
+                    <input formControlName="Email" placeholder="Email" type="text">
+                        <input formControlName="Age" placeholder="Age" type="number">
+                            <input formControlName="Password" placeholder="Password" type="password">
+                                <input formControlName="ConfirmPassword" placeholder="ConfirmPassword" type="password">
+    </p>
+    <div *ngIf="firebaseError!=''">
+        {{firebaseError}}
+    </div>
+    <button>createAccount</button>
+</form>

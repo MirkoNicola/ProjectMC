@@ -11,6 +11,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { RegisterComponent } from './components/register/register.component';
 import { LogInComponent } from './components/log-in/log-in.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LogInComponent } from './components/log-in/log-in.component';
     AngularFireModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
